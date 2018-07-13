@@ -1,0 +1,13 @@
+input{
+    align-content: center;
+}
+
+#sitcomForm{
+    float: left;
+}
+
+h1{
+
+    text-align: center;
+    border-style: dashed;
+}

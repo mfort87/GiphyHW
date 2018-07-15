@@ -11,3 +11,9 @@ h1{
     text-align: center;
     border-style: dashed;
 }
+
+#addShow{
+    margin-top: 5%;
+    margin-left: auto;
+    padding: auto;
+}

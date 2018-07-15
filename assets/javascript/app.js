@@ -17,11 +17,12 @@ function createButtons(topics, classAddition, areaAddition) {
     }
 };
 
-$(document).on("click", "#button-section", function () {
+$("#buttonSection").on("click", ".sitcom-btn", function () {
     $("#sitcomView").empty();
-    var sitcom = $this.data("sitcom");
+    var sitcom = $(this).attr("data-type");
     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=IoQ1zJKcgtHnt82LYqSEo1YjOqvwCJfw&q=" + sitcom + "limit=10"
-
+    console.log(this);
+    event.preventDefault()
 
     //ajax GET Request
     $.ajax({
@@ -40,7 +41,7 @@ $(document).on("click", "#button-section", function () {
                 var image = $("<img>");
                 image.attr("src", still);
                 image.attr("data-still", still);
-                image.attr("data-animated", animated);
+                image.attr("data-animated", animation);
                 image.attr("data-state", "still");
                 image.addClass("sitcomImage");
                 sitcomDiv.append(para);
